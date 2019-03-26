@@ -1,0 +1,43 @@
+<div class="container">
+
+    <div class="row">
+        <div style="color:white; background-color: rgb(241, 136, 15); padding:10px">
+            <h2 class="text-center" style="margin-top: 20px">
+                AtoZ Solutions - User Management App..!
+            </h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-7">
+            <br>
+            <router-outlet></router-outlet>
+        </div>
+        <div class="col-md-5 text-center">
+            <br />
+            <img src='../assets/images/users_img.png' />
+        </div>
+    </div>
+
+    <br><br>
+
+    <footer>
+        <div class="row">
+            <div class="col-md-7">
+                <span class="text-danger">
+                    <strong> Copyright &copy; 2019 to Module_2,
+                        All rights reserved.
+                    </strong>
+                </span>
+            </div>
+            <div class="col-md-5">
+                <span class="text-primary text-right">
+                    <strong>
+                        {{todayDate | date:'dd-MM-yyyy'}}
+                    </strong>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+</div>

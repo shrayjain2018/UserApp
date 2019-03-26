@@ -1,0 +1,36 @@
+<div class="col-md-6">
+
+  <h3>Login</h3>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div *ngIf="invalidLogin" class="alert alert-danger">
+      <div class="text-danger">Invalid Username/Password</div>
+    </div>
+
+    <div class="form-group">
+      <label for="email"> Email Address:</label>
+      <input type="email" class="form-control" formControlName="email" id="email" placeholder="Email">
+
+      <div *ngIf="submitted && loginForm.controls.email.errors" class="error">
+        <div class="text-danger" *ngIf="loginForm.controls.email.errors.required">Email is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password"> Password:</label>
+      <input type="password" class="form-control" formControlName="password" id="password" placeholder="Password">
+
+      <div *ngIf="submitted && loginForm.controls.password.errors" class="error">
+        <div class="text-danger" *ngIf="loginForm.controls.password.errors.required">Password is required</div>
+      </div>
+    </div>
+
+    <button class="btn btn-success" type="submit">Login</button>&nbsp;
+    <button class="btn btn-danger" type="reset">Cancel</button>&nbsp;
+    <a class="btn btn-warning" [routerLink]="['/home']">
+      Go to Home
+    </a>
+
+  </form>
+</div>

@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "shray.jain@gmail.com",
+      "firstname": "Shray",
+      "lastname": "Jain"
+    },
+    {
+      "id": 2,
+      "email": "rajabhinav99@gmail.com",
+      "firstname": "Abhinav",
+      "lastname": "Raj"
+    }
+  ],
+  "login": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "email": "sohan@gmail.com",
+      "password": "abcd"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<div class="col-lg-6">
+
+  <h3>Register</h3>
+
+  <form [formGroup]='registerForm' (ngSubmit)="onSubmit()">
+
+    <div *ngIf="invalidRegister" class="alert alert-danger">
+      <div class="text-danger">Email Already Exists</div>
+    </div>
+
+    <div class="form-group">
+      <label>Email: </label>
+      <input type="text" formControlName="email" class="form-control" placeholder="Email" />
+      <div *ngIf="submitted && registerForm.controls.email.errors" class="error">
+        <div class="text-danger" *ngIf="registerForm.controls.email.errors.required">Email is required</div>
+      </div>
+      <br>
+    </div>
+
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="password" formControlName="password" class="form-control" placeholder="Password" />
+      <div *ngIf="submitted && registerForm.controls.password.errors" class="error">
+        <div class="text-danger" *ngIf="registerForm.controls.password.errors.required">Password is required</div>
+      </div>
+    </div>
+
+    <br>
+    <button type="submit" class="btn btn-success">Register</button>&nbsp;
+    <button type="reset" class=" btn btn-danger">Cancel</button>&nbsp;
+    <button routerLink="/home" class="btn btn-warning">Go To Home</button>
+  </form>
+</div>
